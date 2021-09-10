@@ -1,5 +1,6 @@
-package com.example.lifecycle;
+package com.dependency_injection.lifecycle;
 
+import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,7 +10,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Component
-public class Car implements InitializingBean {
+public class Car implements InitializingBean, DisposableBean {
     private final Engine engine;
     private int maxSpeed;
 
@@ -24,10 +25,11 @@ public class Car implements InitializingBean {
 
     @Autowired
     public void setMaxSpeed(
-            @Value("100") int maxSpeed) {
+            @Value("150") int maxSpeed) {
         this.maxSpeed = maxSpeed;
     }
 
+    @Override
     public void afterPropertiesSet() {
         System.out.println("Initializing Engine after properties");
     }
@@ -47,6 +49,11 @@ public class Car implements InitializingBean {
     public void stopCar() {
         System.out.println("Destroying Engine");
         engine.stopEngine();
+    }
+
+    @Override
+    public void destroy() {
+        System.out.println("Destroying Car");
     }
 
     public void run() throws InterruptedException {

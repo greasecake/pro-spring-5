@@ -1,4 +1,4 @@
-package com.example.lifecycle;
+package com.dependency_injection.lifecycle;
 
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;

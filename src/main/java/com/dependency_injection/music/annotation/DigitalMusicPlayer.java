@@ -1,11 +1,9 @@
-package com.example.music.annotation;
+package com.dependency_injection.music.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Lookup;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.Resource;
 
 @Component
 public class DigitalMusicPlayer implements MusicPlayer {

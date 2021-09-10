@@ -1,4 +1,4 @@
-package com.example.lifecycle;
+package com.dependency_injection.lifecycle;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -20,9 +20,14 @@ public class Config {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext("com.example.lifecycle");
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+        ctx.scan(Config.class.getPackage().getName());
+        ctx.refresh();
+
         Car car = ctx.getBean("car", Car.class);
         car.run();
-        ctx.getDefaultListableBeanFactory().destroySingletons();
+        ctx.registerShutdownHook();
+//        ctx.close();
+//        ctx.getDefaultListableBeanFactory().destroySingletons();
     }
 }

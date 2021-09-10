@@ -1,4 +1,4 @@
-package com.example.circledependency;
+package com.dependency_injection.circledependency;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

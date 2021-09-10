@@ -1,6 +1,5 @@
-package com.example.music.annotation;
+package com.dependency_injection.music.annotation;
 
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
