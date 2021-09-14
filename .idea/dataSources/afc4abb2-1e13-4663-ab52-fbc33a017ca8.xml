@@ -1408,7 +1408,7 @@ true posix/WET
 false posix/Zulu
 true posixrules
 </TimeZones>
-      <IntrospectionStateNumber>528</IntrospectionStateNumber>
+      <IntrospectionStateNumber>532</IntrospectionStateNumber>
       <StartupTime>1631206515</StartupTime>
     </root>
     <database id="2" parent="1" name="postgres">
@@ -1425,7 +1425,7 @@ true posixrules
 13108||-9223372036854775808|U|G
 13108||10|U|G</Grants>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>529</IntrospectionStateNumber>
+      <IntrospectionStateNumber>533</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16385|16387|1
 sequence|table|16395|16397|1
@@ -1488,7 +1488,7 @@ sequence|table|16424|16426|1
       <ObjectId>16384</ObjectId>
       <StateNumber>492</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>529</IntrospectionStateNumber>
+      <IntrospectionStateNumber>533</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <schema id="16" parent="2" name="pg_catalog">
